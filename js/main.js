@@ -67,27 +67,27 @@ function validateForm(event) {
 	}
 
 	let streetAddress = document.querySelector("#street-address");
-	if (email.value.length < 2) {
+	if (streetAddress.value.length < 2) {
 		addError("Please enter a street address.");
 	}
 
 	let city = document.querySelector("#city");
-	if (email.value.length < 2) {
+	if (city.value.length < 2) {
 		addError("Please enter a city.");
 	}
 
 	let state = document.querySelector("#state");
-	if (email.value.length < 2) {
+	if (state.value.length < 2) {
 		addError("Please enter a state/territory.");
 	}
 
 	let postalCode = document.querySelector("#postal-code");
-	if (email.value.length < 2) {
+	if (postalCode.value.length < 2) {
 		addError("Please enter a postal code.");
 	}
 
 	let country = document.querySelector("#country");
-	if (email.value.length < 2) {
+	if (country.value.length < 2) {
 		addError("Please enter a country.");
 	}
 
