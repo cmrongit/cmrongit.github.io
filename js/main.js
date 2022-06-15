@@ -1,50 +1,44 @@
 
 // SIDEBAR - first try:
 
-// const sidebarDisplay = document.getElementById('burger');
+const sidebarDisplay = document.getElementById('burger');
 
-// sidebarDisplay.addEventListener("click", displaySidebar);
+sidebarDisplay.addEventListener("click", displaySidebar);
 
-// const sidebarClose = document.getElementById('x-to-close');
-
-// sidebarClose.addEventListener("click", hideSidebar);
-
-// function displaySidebar () {
-// 	sidebar.classList.add("show-menu");
-// }
-
-// function hideSidebar () {
-// 	sidebar.classList.remove("show-menu")
-// }
-
-// document.addEventListener("click", sidebarVanish)
-
-// function sidebarVanish(event) {
-// 	if (!event.target.matches(".burder-sidebar"))
-// 	sidebar.classList.remove("show-menu")
-// }
-
-
-
-// SIDEBAR - second try:
-
-const menu1Button = document.getElementById('burger');
-
-const menu1Dropdown = document.getElementById('sidebar');
-
-menu1Button.addEventListener("click", displayMenuOne);
-
-function displayMenuOne () {
-  menu1Dropdown.classList.add("show");
+function displaySidebar () {
+	sidebar.classList.add("show-menu");
 }
 
-document.addEventListener("click", hideMenus)
 
-function hideMenus(event) {
-  if (!event.target.matches(".sidebar-links li")) {
-  menu1Dropdown.classList.remove("show");
-  }
+const sidebarClose = document.getElementById('x-to-close');
+
+sidebarClose.addEventListener("click", hideSidebar);
+
+function hideSidebar () {
+	sidebar.classList.remove("show-menu")
 }
+
+
+
+// // SIDEBAR - second try:
+
+// const menu1Button = document.getElementById('burger');
+
+// const menu1Dropdown = document.getElementById('sidebar');
+
+// menu1Button.addEventListener("click", displayMenuOne);
+
+// function displayMenuOne () {
+//   menu1Dropdown.classList.add("show");
+// }
+
+// document.addEventListener("click", hideMenus)
+
+// function hideMenus(event) {
+//   if (!event.target.matches(".sidebar-links li")) {
+//   menu1Dropdown.classList.remove("show");
+//   }
+// }
 
 
 
