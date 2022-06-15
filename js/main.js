@@ -1,40 +1,51 @@
-// // BOOTSTRAP
 
-// <!-- JavaScript Bundle with Popper -->
-// <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+// SIDEBAR - first try:
 
-// //
+// const sidebarDisplay = document.getElementById('burger');
 
-// SIDEBAR
+// sidebarDisplay.addEventListener("click", displaySidebar);
 
-const sidebarDisplay = document.getElementById('burger');
+// const sidebarClose = document.getElementById('x-to-close');
 
-sidebarDisplay.addEventListener("click", displaySidebar);
+// sidebarClose.addEventListener("click", hideSidebar);
 
-const sidebarClose = document.getElementById('x-to-close');
+// function displaySidebar () {
+// 	sidebar.classList.add("show-menu");
+// }
 
-sidebarClose.addEventListener("click", hideSidebar);
+// function hideSidebar () {
+// 	sidebar.classList.remove("show-menu")
+// }
 
-function displaySidebar () {
-	sidebar.classList.add("show-menu");
-}
+// document.addEventListener("click", sidebarVanish)
 
-function hideSidebar () {
-	sidebar.classList.remove("show-menu")
-}
-
-
-// function hideSidebar(event) {
-// 	if (!event.target.matches(".sidebar-links")) {
-// 	sidebar.classList.remove("show");
-// 	}
+// function sidebarVanish(event) {
+// 	if (!event.target.matches(".burder-sidebar"))
+// 	sidebar.classList.remove("show-menu")
 // }
 
 
-// SLIDES
 
-// var myCarousel = document.querySelector('#myCarousel')
-// var carousel = new.bootstrap.Carousel(myCarousel)
+// SIDEBAR - second try:
+
+const menu1Button = document.getElementById('burger');
+
+const menu1Dropdown = document.getElementById('sidebar');
+
+menu1Button.addEventListener("click", displayMenuOne);
+
+function displayMenuOne () {
+  menu1Dropdown.classList.add("show");
+}
+
+document.addEventListener("click", hideMenus)
+
+function hideMenus(event) {
+  if (!event.target.matches(".sidebar-links li")) {
+  menu1Dropdown.classList.remove("show");
+  }
+}
+
 
 
 
@@ -116,26 +127,6 @@ function addError(error) {
 
 // addError("Please choose an orphan.")
 // addError("Please enter a valid calf name.")
-
-
-// switch(orphanName) {
-// 	case 'frank':
-// 	case 'sadie':
-// 	case 'rex':
-// 	case 'earhart':
-// 	case 'sparks':
-// 	case 'banjo':
-// 	case 'dumpling':
-// 	case 'jimothy':
-// 	case 'pemily':
-// 	case 'fathom':
-// 	case 'bucket':
-// 	case 'jib':
-// 	case 'flankrin':
-// 	case 'bragnes':
-// 	case 'platano':
-// }
-
 
 
 
