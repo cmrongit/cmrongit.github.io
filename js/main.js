@@ -1,8 +1,7 @@
 
-// SIDEBAR - first try:
+// SIDEBAR
 
 const sidebarDisplay = document.getElementById('burger');
-
 sidebarDisplay.addEventListener("click", displaySidebar);
 
 function displaySidebar () {
@@ -11,36 +10,24 @@ function displaySidebar () {
 
 
 const sidebarClose = document.getElementById('x-to-close');
+sidebarClose.addEventListener("click", sidebarVanish);
 
-sidebarClose.addEventListener("click", hideSidebar);
+const factsLink = document.querySelector("#facts-link")
+factsLink.addEventListener("click", sidebarVanish)
 
-function hideSidebar () {
+const aboutLink = document.querySelector("#about-link")
+aboutLink.addEventListener("click", sidebarVanish)
+
+const galleryLink = document.querySelector("#gallery-link")
+galleryLink.addEventListener("click", sidebarVanish)
+
+const applicationLink = document.querySelector("#application-link")
+applicationLink.addEventListener("click", sidebarVanish)
+
+
+function sidebarVanish() {
 	sidebar.classList.remove("show-menu")
 }
-
-
-
-// // SIDEBAR - second try:
-
-// const menu1Button = document.getElementById('burger');
-
-// const menu1Dropdown = document.getElementById('sidebar');
-
-// menu1Button.addEventListener("click", displayMenuOne);
-
-// function displayMenuOne () {
-//   menu1Dropdown.classList.add("show");
-// }
-
-// document.addEventListener("click", hideMenus)
-
-// function hideMenus(event) {
-//   if (!event.target.matches(".sidebar-links li")) {
-//   menu1Dropdown.classList.remove("show");
-//   }
-// }
-
-
 
 
 
@@ -68,7 +55,7 @@ function validateForm(event) {
 	}
 
 	let phoneNumber = document.querySelector("#phone");
-	if (phoneNumber.value.length < 2) {
+	if (phoneNumber.value.length < 10) {
 		addError("Please enter a valid phone number.");
 	}
 
@@ -102,6 +89,20 @@ function validateForm(event) {
 		addError("Please enter a country.");
 	}
 
+	let squareFootage = document.querySelector("#square-footage");
+	if (squareFootage.value < 1000) {
+		addError("Square footage is too low.");
+	}
+
+	let occupants = document.querySelector("#occupants");
+	if (occupants.value < 4) {
+		addError("Number of occupants is too low.");
+	}
+
+	let selectOrphan = document.querySelector("#select");
+	if (selectOrphan.value === "Name") {
+		addError("Please select an orphan to foster.");
+	}
 }
 
 function addError(error) {
@@ -112,15 +113,91 @@ function addError(error) {
 
 
 
-// ERROR MESSAGES
 
-// addError("Please enter square footage.")
-// addError("Please enter number of occupants.")
 
-// * addError("Please select a type of dwelling.")
+// MODAL
 
-// addError("Please choose an orphan.")
-// addError("Please enter a valid calf name.")
+$(".show").on("click", function(){
+  $(".mask").addClass("active");
+});
+
+
+function closeModal(){
+  $(".mask").removeClass("active");
+}
+
+
+$(".close, .mask").on("click", function(){
+  closeModal();
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeModal();
+  }
+});
+
+
+
+
+
+
+
+// – AS IF SIDEBAR - DNF
+// const modalDisplay = document.getElementById('submit-date');
+// modalDisplay.addEventListener("click", showModal);
+
+// function showModal () {
+// 	document.classList.add("show-modal");
+// }
+
+
+
+
+
+// // FORM B
+
+// const formb = document.querySelector("#schedule-form");
+// const errorsListb = document.querySelector("#errors-schedule");
+
+// formb.addEventListener("submit", validateFormb);
+
+// function validateFormb(event) {
+//   event.preventDefault();
+
+// 	errorsListb.innerHTML = "";
+
+// 	let selectTime = document.querySelector("#select-time");
+// 	if (selectTime.value.length === "time") {
+// 		addError("Please select a time.");
+	
+// 	let selectDay = document.querySelector("#select-day");
+// 	if (selectDayvalue.length === "day") {
+// 		addError("Please select a day.");
+	
+// 	let selectMonth = document.querySelector("#select-month");
+// 	if (selectMonth.value.length === "month") {
+// 		addError("Please select a month.");
+	
+// 	let selectYear = document.querySelector("#select-year");
+// 	if (selectYear.value.length === "year") {
+// 		addError("Please select a year.");
+// 	}
+
+
+// function addError(error) {
+//   let li = document.createElement("li");
+//   li.innerText = error;
+//   errorsList.appendChild(li);
+// }
+
+
+
+
+
+
+
+
 
 
 
