@@ -156,7 +156,7 @@ hr {
 /* MAIN - HERO */
 
 .hero {
-	height: 60vh;
+	height: 65vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -174,37 +174,37 @@ hr {
 
 @keyframes color-change {
 	0% {
-    background-image: url('images/hero/hero-1.png');
+    background-image: url('images/hero/hero-1.jpg');
   }
   10% {
-    background-image: url('images/hero/hero-2.png');
+    background-image: url('images/hero/hero-2.jpg');
   }
   20% {
-    background-image: url('images/hero/hero-3.png');
+    background-image: url('images/hero/hero-3.jpg');
   }
   30% {
-    background-image: url('images/hero/hero-4.png');
+    background-image: url('images/hero/hero-4.jpg');
   }
   40% {
-    background-image: url('images/hero/hero-5.png');
+    background-image: url('images/hero/hero-5.jpg');
   }
 	50% {
-    background-image: url('images/hero/hero-6.png');
+    background-image: url('images/hero/hero-6.jpg');
   }
   60% {
-    background-image: url('images/hero/hero-7.png');
+    background-image: url('images/hero/hero-7.jpg');
   }
   70% {
-    background-image: url('images/hero/hero-8.png');
+    background-image: url('images/hero/hero-8.jpg');
   }
   80% {
-    background-image: url('images/hero/hero-9.png');
+    background-image: url('images/hero/hero-9.jpg');
   }
   90% {
-    background-image: url('images/hero/hero-10.png');
+    background-image: url('images/hero/hero-10.jpg');
 	}
   100% {
-    background-image: url('images/hero/hero-1.png');
+    background-image: url('images/hero/hero-1.jpg');
   }
 }
 
@@ -293,8 +293,8 @@ main h1 {
 }
 
 .parade1 {
-	height: 12vh;
-	background-image: url('images/parades/parade1.png');
+	height: 15vh;
+	background-image: url('images/parades/parade1.jpg');
 	background-color: sienna;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -316,7 +316,6 @@ main h1 {
 
 .elephacts {
 	background-color: white;
-	border: solid black 2px;
 	border-radius: 10px;
 	margin: 10px;
 	display: flex;
@@ -346,7 +345,7 @@ main h1 {
 	padding: 0px;
 	font-family: sans-serif;
 	color: black;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .facts-content li {
@@ -410,8 +409,8 @@ main h1 {
 }
 
 .parade2 {
-	height: 12vh;
-	background-image: url('images/parades/parade2.png');
+	height: 15vh;
+	background-image: url('images/parades/parade2.jpg');
 	background-color: #124712;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -426,10 +425,9 @@ main h1 {
 }
 
 .about-subsection {
-	border: solid black 2px;
 	border-radius: 10px;
 	background-color: white;
-	margin: 10px;
+	margin: 15px;
 	padding: 10px;
 }
 
@@ -476,8 +474,8 @@ main h1 {
 /* GALLERY */
 
 .parade3 {
-	height: 12vh;
-	background-image: url('images/parades/parade3.png');
+	height: 15vh;
+	background-image: url('images/parades/parade3.jpg');
 	background-color: #124712;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -610,8 +608,8 @@ main h1 {
 }
 
 .parade4 {
-	height: 12vh;
-	background-image: url('images/parades/parade4.png');
+	height: 15vh;
+	background-image: url('images/parades/parade4.jpg');
 	background-color: #124712;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -685,9 +683,7 @@ main h1 {
 
 .submit-button {
 	background-color: skyblue;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 	transition: .5s ease-in-out;
 	border: 2px black solid;
 	border-radius: 5px;
@@ -743,7 +739,7 @@ main h1 {
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(105,105,105,0.5);
-	position: fixed;
+/*	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -753,7 +749,7 @@ main h1 {
 	opacity: 0;
 	transform: translateY(100%);
 	transition: 0.5s ease-in-out;
-}
+*/}
 
 .modal {
 	display: flex;
@@ -768,19 +764,6 @@ main h1 {
 	margin-left: 20vw;
 	padding: 20px;
 }
-
-
-.active{
-  visibility: visible;
-  opacity: 1;
-}
-
-.active + .modal{
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 .accepted-container {
 	display: flex;
@@ -918,6 +901,10 @@ main h1 {
 	margin: 0px;
 }
 
+.show-modal {
+	opacity: 1;
+	transform: translateY(0%);
+}
 
 
 /* FOOTER */

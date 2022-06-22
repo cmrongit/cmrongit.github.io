@@ -117,40 +117,22 @@ function addError(error) {
 
 // MODAL
 
-$(".show").on("click", function(){
-  $(".mask").addClass("active");
-});
 
-
-function closeModal(){
-  $(".mask").removeClass("active");
-}
-
-
-$(".close, .mask").on("click", function(){
-  closeModal();
-});
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    closeModal();
-  }
-});
-
-
-
-
-
-
-
-// – AS IF SIDEBAR - DNF
-// const modalDisplay = document.getElementById('submit-date');
+// const modalDisplay = document.getElementById('call-modal');
 // modalDisplay.addEventListener("click", showModal);
 
 // function showModal () {
 // 	document.classList.add("show-modal");
 // }
 
+
+
+// const modalDisplay = document.getElementById('return-button');
+// modalDisplay.addEventListener("click", modalVanish);
+
+// function modalVanish() {
+// 	sidebar.classList.remove("show-modal")
+// }
 
 
 
